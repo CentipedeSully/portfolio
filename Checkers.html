@@ -1,0 +1,126 @@
+<!Doctype html>
+<html lang="us">
+    <head>
+        <meta charset=""utf-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checkers</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <main>
+            <nav class="navbar navbar-expand bg-dark navbar-dark">
+                <div class="container" >
+                    <div class="navbar-text">Portfolio Sully</div>
+                    <div class="navbar-text">Checkers</div>
+                </div>
+            </nav>
+            <div class="container " id="about">
+                <div class="row d-flex justify-content-center">
+                    <h1 class="text-center pt-5">Checkers</h1>
+                </div>
+                <div class="row">
+                    <p class="text-center pb-5  d-flex justify-content-center flex-wrap "> 
+                        <a 
+                            class="mx-3"
+                            href="https://github.com/CentipedeSully/Checkers/tree/main/Assets/Scripts" 
+                            target="_blank"
+                            style="text-decoration-line: none;">
+                            Project Source
+                        </a>
+                        <a 
+                            class="mx-3"
+                            href="Portfolio.html" 
+                            target="_blank"
+                            style="text-decoration-line: none;">
+                            Back Home
+                        </a>
+                    </p>
+                </div>
+                <div class="row pb-5">
+                    <div class="col-6 d-flex justify-content-center">
+                        <img class="border" src="" alt="CB main demo">
+                    </div>
+                    <div class="col-6">
+                        <h5 class="text-center">Techs Demonstrated</h5>
+                        <ul class="d-flex flex-row flex-wrap justify-content-center" style="list-style: none;">
+                            <li class="px-2 border">C#</li>
+                            <li class="px-2 border">Unity</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row pb-5">
+                    <h5 class="pl-5">Project Summary</h5>
+                    <p>
+                        This project was built primarily to test some underlying utilities I've developed within my own 
+                        toolkit-- utilities that manage the game board, and the game pieces, and the turn-system for example.
+                         Otherwise, the game is simply a local checkers game. Its features include everything you'd expect from
+                         a game of checkers (minus the Ai opponent ^_^).
+                    </p>
+                    <p>
+                        Still, despite the application's relative simplicity, it was still a pleasure to build. Visit the 
+                        Tabletop RPG section to view the toolkit itself.
+                    </p>
+                </div>
+
+            </div>
+            <div class="container" id="Features">
+                <hr>
+                <div class="row">
+                    <h1 class="text-center py-4">Features</h1>
+                </div>
+                <div class="container pb-5 d-flex flex-wrap justify-content-center gap-5">
+                    <!-- ================================= Typical Checkers Mechanics ================================= -->
+                    <div class="container card text-center">
+                        <h5 class="card-header">Complete GameLoop</h5>
+                        <img class="card-img-top" src="" alt="Demo">
+                        <p>
+                            This project is 100% playable, with sound effects, win conditions, core checkers rule-enforcement,
+                            and even a draw game-state mechanic. This means everything in the game performs as expected; 
+                            no moving opponent pieces on you turn, nor improper jumping off the board, nor attempting to
+                            move invalid pieces, nor any other funny business.
+                        </p>
+                        <div class="card-footer">
+                            <p>
+                                <a  href="https://github.com/CentipedeSully/Checkers/blob/main/Assets/Scripts/Board%20Manipulation/UnitController.cs" 
+                                    target="_blank" 
+                                    style="text-decoration-line: none;">
+                                    View Feature Source
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ================================= Game Piece Logic ================================= -->
+                    <div class="container card text-center">
+                        <h5 class="card-header">Clean Checkers Piece Logic</h5>
+                        <img class="card-img-top" src="" alt="Demo">
+                        <p>
+                            The game piece mechanics and the checkerPiece mechanics are actually two different scripts (notice 
+                            there isn't a "move-piece" utility anywhere in the script). The checkers units merely define their
+                            movement and other states, while the gamepiece logic handles the actual movement-- completely unhindered 
+                            from the checker's logic. 
+                        </p>
+                        <p>
+                            It's the unit controller that moves the game pieces according to the checkers-unit's attributes. From here,
+                            greater unit functionality can be expanded upon without manipulating the core movement functionality. In other 
+                            words, game piece-logic is open for expansion, but closed for modification.  
+                        </p>
+                        <div class="card-footer">
+                            <p>
+                                <a  href="https://github.com/CentipedeSully/Checkers/blob/main/Assets/Scripts/Unit%20Attributes/CheckersUnitAttributes.cs" 
+                                    target="_blank" 
+                                    style="text-decoration-line: none;">
+                                    View Feature Source
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
