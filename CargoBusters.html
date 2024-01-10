@@ -1,0 +1,165 @@
+<!Doctype html>
+<html lang="us">
+    <head>
+        <meta charset=""utf-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio Sully</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <main>
+            <nav class="navbar navbar-expand bg-dark navbar-dark">
+                <div class="container" >
+                    <div class="navbar-text">Portfolio Sully</div>
+                    <div class="navbar-text">CargoBusters</div>
+                </div>
+            </nav>
+            <div class="container " id="about">
+                <div class="row d-flex justify-content-center">
+                    <h1 class="text-center pt-5">Cargo Busters</h1>
+                </div>
+                <div class="row">
+                    <p class="text-center pb-5  d-flex justify-content-center flex-wrap "> 
+                        <a 
+                            class="mx-3"
+                            href="https://github.com/CentipedeSully/CargoBusters/tree/Refactor/Assets/Scripts" 
+                            target="_blank"
+                            style="text-decoration-line: none;">
+                            Project Source
+                        </a>
+                        <a 
+                            class="mx-3"
+                            href="" 
+                            target="_blank"
+                            style="text-decoration-line: none;">
+                            Back Home
+                        </a>
+                    </p>
+                </div>
+                <div class="row pb-5">
+                    <div class="col-6 d-flex justify-content-center">
+                        <img class="border" src="" alt="CB main demo">
+                    </div>
+                    <div class="col-6">
+                        <h5 class="text-center">Techs Demonstrated</h5>
+                        <ul class="d-flex flex-row flex-wrap justify-content-center" style="list-style: none;">
+                            <li class="px-2 border">C#</li>
+                            <li class="px-2 border">Unity</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row pb-5">
+                    <h5 class="pl-5">Project Summary</h5>
+                    <p>
+                        Write a summary here!
+                    </p>
+                </div>
+
+            </div>
+            <div class="container" id="Features">
+                <hr>
+                <div class="row">
+                    <h1 class="text-center py-4">Features</h1>
+                </div>
+                <div class="container pb-5 d-flex flex-wrap justify-content-center gap-5">
+                    <!-- ================================= Ai Behaviour Card ================================= -->
+                    <div class="container card text-center">
+                        <h5 class="card-header">Ai Behavior</h5>
+                        <img class="card-img-top" src="" alt="Demo">
+                        <p>
+                            Each Ai ship dynamically engages enemy ships while doing it's best not to damage
+                            friendlies. Depending on the ship's weaponry, each ship does its best to maintain a safe
+                            distance from the target during engagement. 
+                        </p>
+                        <p>
+                            <strong>How:</strong> Each ship has a controller that communicates with the it's own subsystems. The 
+                            scanner subsystem picks up enemies, the engines subsystem provides movement, and the weapons
+                            subsystem controls firing and weapon cooldowns. This abstraction and encapsulation of the ship's subsystems
+                            keeps the controller's logic clean, which in turn allows for more complex maneuver implementations (such as maintianing
+                            a set distance from a target, or exercising smarter fire decisions).
+                        </p>
+                        <div class="card-footer">
+                            <p>
+                                <a  href="" 
+                                    target="_blank" 
+                                    style="text-decoration-line: none;">
+                                    Feature Source
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ================================= Wave spawning ================================= -->
+                    <div class="container card text-center">
+                        <h5 class="card-header">Wave Spawning</h5>
+                        <img class="card-img-top" src="" alt="Demo">
+                        <p>
+                            Ships spawn into the zone each wave, and once a wave is completed then the volumne of incomming 
+                            ships increase. When a variable amount of waves are completed, then the round is completed. 
+                            Enemy ships get stronger each round, but the volume of ships return to a minimal level.
+                        </p>
+                        <div class="card-footer">
+                            <p>
+                                <a  href="" 
+                                    target="_blank" 
+                                    style="text-decoration-line: none;">
+                                    Feature Source
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ================================= Resources & Upgrades ================================= -->
+                    <div class="container card text-center">
+                        <h5 class="card-header">Upgrades</h5>
+                        <img class="card-img-top" src="" alt="Demo">
+                        <p>
+                            The upgrades are straight-forward, and they range from simple hull and shield and damage
+                            upgrades to increased shield regen rates and unlocking other special actions (like spending
+                            time to repair the ship or warping out of the combat zone).
+                        </p>
+                        
+                        <div class="card-footer">
+                            <p>
+                                <a  href="" 
+                                    target="_blank" 
+                                    style="text-decoration-line: none;">
+                                    Feature Source
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- ================================ Looting ================================ -->
+                    <div class="container card text-center">
+                        <h5 class="card-header">Looting Disabled Ships</h5>
+                        <img class="card-img-top" src="" alt="Demo">
+                        <p>
+                            When a ship is disabled, it's cargo may be plundered. Simply getting close enough
+                            and completing the loot action will reward the player with resources. 
+                        </p>
+                        <p>
+                            <strong>How:</strong> This was a bit tricky to implement. Firstly the area around the 
+                            player is monitored for lootable objects, and when is in range, the respective UI
+                            element is displayed. The looting action takes time, and the target must close to the 
+                            player for the action to complete. Taking damage also cancels the looting.
+                        </p>
+                        <div class="card-footer">
+                            <p>
+                                <a  href="" 
+                                    target="_blank" 
+                                    style="text-decoration-line: none;">
+                                    Feature Source
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
