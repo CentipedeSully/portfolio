@@ -1,0 +1,142 @@
+<!Doctype html>
+<html lang="us">
+    <head>
+        <meta charset=""utf-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ingredient Tracker</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <main>
+            <nav class="navbar navbar-expand bg-dark navbar-dark">
+                <div class="container" >
+                    <div class="navbar-text">Portfolio Sully</div>
+                    <div class="navbar-text">Ingredient Tracker</div>
+                </div>
+            </nav>
+            <div class="container " id="about">
+                <div class="row d-flex justify-content-center">
+                    <h1 class="text-center pt-5">Ingredient Tracker</h1>
+                </div>
+                <div class="row">
+                    <p class="text-center pb-5  d-flex justify-content-center flex-wrap "> 
+                        <a 
+                            class="mx-3"
+                            href="https://github.com/CentipedeSully/Ingredient_Tracker" 
+                            target="_blank"
+                            style="text-decoration-line: none;">
+                            Project Source
+                        </a>
+                        <a 
+                            class="mx-3"
+                            href="Portfolio.html" 
+                            target="_blank"
+                            style="text-decoration-line: none;">
+                            Back Home
+                        </a>
+                    </p>
+                </div>
+                <div class="row pb-5">
+                    <div class="col-6 d-flex justify-content-center">
+                        <img class="border" src="" alt="Ingredient Tracker demo gif">
+                    </div>
+                    <div class="col-6">
+                        <h5 class="text-center">Techs Demonstrated</h5>
+                        <ul class="d-flex flex-row flex-wrap justify-content-center" style="list-style: none;">
+                            <li class="px-2 border">Python</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row pb-5">
+                    <h5 class="pl-5">Project Summary</h5>
+                    <p>
+                        Primarily this project served as a personal python challenge (and challenging it was!). 
+                        But it also needed a practical reason to exist. So the decision was made to create a
+                        personal database system to store some gameplay info regarding my Skyrim sessions. 
+                    </p>
+                    <p>
+                        <strong>The Problem:</strong> I play a heavily modded version of Skyrim, and within
+                        this version of the game exists a complex new alchemy system that exists underneath
+                        the original (Here's the mod, in case you're curious: <a href="https://www.nexusmods.com/skyrimspecialedition/mods/20983">Spell Research Mod</a>). 
+                        This new system encourages the player to breakdown the preexisting ingredients into base chemicals,
+                        and then rebuild new elixiers from the base chemicals. But unfortunately, this new system doesn't
+                        provide the player a history of previous ingredient breakdowns, so it's often forgotten which ingredients
+                        yield which chemicals.
+                    </p>
+                    <p>
+                        <strong>The Solution:</strong> So, instead of continuing to manually update and reference a notepad 
+                        file to recall previous discoveries, I instead created this application. It tracks all provided ingredients
+                        , allows querying the data with/without filters, and is also capable of writing and reading database files 
+                        (.csv) to keep data persistent. It even has a dedicated GUI!  
+                    </p>
+                </div>
+
+            </div>
+            <div class="container" id="Features">
+                <hr>
+                <div class="row">
+                    <h1 class="text-center py-4">Features</h1>
+                </div>
+                <div class="container pb-5 d-flex flex-wrap justify-content-center gap-5">
+                    <!-- ================================= Core Database Funtionality ================================= -->
+                    <div class="container card text-center">
+                        <h5 class="card-header">Core Database Fuctionality</h5>
+                        <img class="card-img-top" src="" alt="Demo">
+                        <p>
+                            Ingredients can be added, removed, edited, and queried. Queries may be built with the following fields:
+                        </p>
+                        <ul style="list-style: none; font-style: italic;">
+                            <li>Using the ingredient's name</li>
+                            <li>Using any possible existing chemical(s)</li>
+                            <li>Specifying the desired Min/Max chemical quantity (optional)</li>
+                        </ul>
+                        <p>
+                            The results are always displayed in alphabetical order, and the stored data is case 
+                            insensitive. Inputs also undergo validation before opertaions are performed.
+                        </p>
+                        <div class="card-footer">
+                            <p>
+                                <a  href="https://github.com/CentipedeSully/Ingredient_Tracker/blob/main/gui_window.py" 
+                                    target="_blank" 
+                                    style="text-decoration-line: none;">
+                                    View Feature Source
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ================================= Reading/Writing Data Files ================================= -->
+                    <div class="container card text-center">
+                        <h5 class="card-header">Reading/Writing Data Files</h5>
+                        <img class="card-img-top" src="" alt="Demo">
+                        <p>
+                             A database app would be pretty useless if it lacked a means of saving its data. 
+                             Files may be imported and exported from this application, and the parsing of files
+                             is robust. The app ignores poorly formatted imports, and it also ignores any existing 
+                             bad data it finds within a properly formatted import. Ultimately, the app doesn't 
+                             consume bad data from files.
+                        </p>
+                    </div>
+
+                    <!-- ================================= Dedicated GUI ================================= -->
+                    <div class="container card text-center">
+                        <h5 class="card-header">Dedicated GUI</h5>
+                        <img class="card-img-top" src="" alt="Demo">
+                        <p>
+                             The GUI is simple and easy to learn. Buttons are disabled when out of context,
+                             input rows may be added or removed for narrower/wider queries, and actions are 
+                             logged in an output diplay for clarity.
+                        </p>
+                        <p>
+                            It won't brew your tea though, unfortunately.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
