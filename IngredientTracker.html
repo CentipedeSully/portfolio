@@ -48,12 +48,13 @@
                         <h5 class="text-center">Techs Demonstrated</h5>
                         <ul class="d-flex flex-row flex-wrap justify-content-center" style="list-style: none;">
                             <li class="px-2 border">Python</li>
+                            <li class="px-2 border">Git</li>
                         </ul>
                     </div>
                 </div>
                 <div class="row pb-5">
                     <h5 class="pl-5">Project Summary</h5>
-                    <p>
+                    <p >
                         Primarily this project served as a personal python challenge (and challenging it was!). 
                         But it also needed a practical reason to exist. So the decision was made to create a
                         personal database system to store some gameplay info regarding my Skyrim sessions. 
@@ -69,7 +70,8 @@
                     </p>
                     <p>
                         <strong>The Solution:</strong> So, instead of continuing to manually update and reference a notepad 
-                        file to recall previous discoveries, I instead created this application. It tracks all provided ingredients
+                        file to recall previous discoveries (or spoil the fun by referencing the mod's documentation for all
+                        ingredient compositions), I instead created this application. It tracks all provided ingredients
                         , allows querying the data with/without filters, and is also capable of writing and reading database files 
                         (.csv) to keep data persistent. It even has a dedicated GUI!  
                     </p>
@@ -86,18 +88,20 @@
                     <div class="container card text-center">
                         <h5 class="card-header">Core Database Fuctionality</h5>
                         <img class="card-img-top" src="" alt="Demo">
-                        <p>
-                            Ingredients can be added, removed, edited, and queried. Queries may be built with the following fields:
-                        </p>
-                        <ul style="list-style: none; font-style: italic;">
-                            <li>Using the ingredient's name</li>
-                            <li>Using any possible existing chemical(s)</li>
-                            <li>Specifying the desired Min/Max chemical quantity (optional)</li>
-                        </ul>
-                        <p>
-                            The results are always displayed in alphabetical order, and the stored data is case 
-                            insensitive. Inputs also undergo validation before opertaions are performed.
-                        </p>
+                        <div class="card-body">
+                            <p>
+                                Ingredients can be added, removed, edited, and queried. Queries may be built with the following fields:
+                            </p>
+                            <ul style="list-style: none; font-style: italic;">
+                                <li>Using the ingredient's name</li>
+                                <li>Using any possible existing chemical(s)</li>
+                                <li>Specifying the desired Min/Max chemical quantity (optional)</li>
+                            </ul>
+                            <p>
+                                The results are always displayed in alphabetical order, and the stored data is case 
+                                insensitive. Inputs also undergo validation before opertaions are performed.
+                            </p>
+                        </div>
                         <div class="card-footer">
                             <p>
                                 <a  href="https://github.com/CentipedeSully/Ingredient_Tracker/blob/main/gui_window.py" 
@@ -113,7 +117,7 @@
                     <div class="container card text-center">
                         <h5 class="card-header">Reading/Writing Data Files</h5>
                         <img class="card-img-top" src="" alt="Demo">
-                        <p>
+                        <p class="card-body">
                              A database app would be pretty useless if it lacked a means of saving its data. 
                              Files may be imported and exported from this application, and the parsing of files
                              is robust. The app ignores poorly formatted imports, and it also ignores any existing 
@@ -125,8 +129,7 @@
                     <!-- ================================= Dedicated GUI ================================= -->
                     <div class="container card text-center">
                         <h5 class="card-header">Dedicated GUI</h5>
-                        <img class="card-img-top" src="" alt="Demo">
-                        <p>
+                        <p class="card-body">
                              The GUI is simple and easy to learn. Buttons are disabled when out of context,
                              input rows may be added or removed for narrower/wider queries, and actions are 
                              logged in an output diplay for clarity.

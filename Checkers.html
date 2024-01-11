@@ -42,13 +42,14 @@
                 </div>
                 <div class="row pb-5">
                     <div class="col-6 d-flex justify-content-center">
-                        <img class="border" src="" alt="CB main demo">
+                        <img class="border" src="" alt="Checkers demo gif">
                     </div>
                     <div class="col-6">
                         <h5 class="text-center">Techs Demonstrated</h5>
                         <ul class="d-flex flex-row flex-wrap justify-content-center" style="list-style: none;">
                             <li class="px-2 border">C#</li>
                             <li class="px-2 border">Unity</li>
+                            <li class="px-2 border">Git</li>
                         </ul>
                     </div>
                 </div>
@@ -77,7 +78,7 @@
                     <div class="container card text-center">
                         <h5 class="card-header">Complete GameLoop</h5>
                         <img class="card-img-top" src="" alt="Demo">
-                        <p>
+                        <p class="card-body">
                             This project is 100% playable, with sound effects, win conditions, core checkers rule-enforcement,
                             and even a draw game-state mechanic. This means everything in the game performs as expected; 
                             no moving opponent pieces on you turn, nor improper jumping off the board, nor attempting to
@@ -98,17 +99,20 @@
                     <div class="container card text-center">
                         <h5 class="card-header">Clean Checkers Piece Logic</h5>
                         <img class="card-img-top" src="" alt="Demo">
-                        <p>
-                            The game piece mechanics and the checkerPiece mechanics are actually two different scripts (notice 
-                            there isn't a "move-piece" utility anywhere in the script). The checkers units merely define their
-                            movement and other states, while the gamepiece logic handles the actual movement-- completely unhindered 
-                            from the checker's logic. 
-                        </p>
-                        <p>
-                            It's the unit controller that moves the game pieces according to the checkers-unit's attributes. From here,
-                            greater unit functionality can be expanded upon without manipulating the core movement functionality. In other 
-                            words, game piece-logic is open for expansion, but closed for modification.  
-                        </p>
+                        <div class="card-body">
+                            <p>
+                                The game piece mechanics and the checkerPiece mechanics are actually two different scripts (notice 
+                                there isn't a "move-piece" utility anywhere in the script). The checkers units merely define their
+                                movement options (along with other character-defining attributes), while the gamepiece logic handles 
+                                universal movement across the gameboard-- completely unaware of the checker's from the checker's logic. 
+                            </p>
+                            <p>
+                                It's the unit controller script that brings both sides together. It moves each checkers game pieces 
+                                according to both the checker-unit's attributes and the underlying game piece's legal moves. With this
+                                setup, greater unit functionality can be expanded upon without manipulating the core movement functionality. 
+                                In other words, game piece-logic is open for expansion, but closed for modification.  
+                            </p>
+                        </div>
                         <div class="card-footer">
                             <p>
                                 <a  href="https://github.com/CentipedeSully/Checkers/blob/main/Assets/Scripts/Unit%20Attributes/CheckersUnitAttributes.cs" 
